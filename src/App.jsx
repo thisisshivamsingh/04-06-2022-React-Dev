@@ -49,36 +49,8 @@
 
 /////////////// Challenge 6 Slot Machine Game in React Js ///////////////
 import React from "react";
-const SlotM = () => {
-  let x = "😄";
-  let y = "😄";
-  let z = "🎅";
-  if (x === y && y === z) {
-    return (
-      <>
-        <div className="slot_inner">
-          <h1>
-            {x} {y} {z}
-          </h1>
-          <h1> This is Matching. </h1>
-          <hr />
-        </div>
-      </>
-    );
-  } else {
-    return (
-      <>
-        <div className="slot_inner">
-          <h1>
-            {x} {y} {z}
-          </h1>
-          <h1> This is Not Matching. </h1>
-          <hr />
-        </div>
-      </>
-    );
-  }
-};
+import SlotM from "./SlotMach";
+
 const App = () => {
   return (
     <>
@@ -88,8 +60,12 @@ const App = () => {
       </h1>
       <div className="slotmachine">
         <SlotM x="😄" y="😄" z="😄" />
-        <SlotM />
-        <SlotM />
+        <hr />
+        <SlotM x="😄" y="😆" z="😄" />
+        <hr />
+        <SlotM x="🍎" y="🍌" z="🍎" />
+        <hr />
+        <SlotM x="💑" y="💑" z="💑" />
       </div>
     </>
   );
